@@ -32,6 +32,7 @@ app.use("/uploads", express.static("uploads"))
 app.use("/auth", [
   require("./api/routes/auth/signup"),
   require("./api/routes/auth/signin"),
+  require("./api/routes/auth/userProfile"),
 ])
 
 app.use((req, res, next) => {
