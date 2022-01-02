@@ -1,0 +1,8 @@
+{
+  "name": "tandom",
+  "version": "1.0.0",
+  "description": "tandom mailer",
+  "main": "app.js",
+  "author": "rukkiecodes",
+  "license": "MIT"
+}
