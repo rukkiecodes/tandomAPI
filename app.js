@@ -29,7 +29,10 @@ app.use(morgan("dev"))
 app.use("/uploads", express.static("uploads"))
 
 // @ts-ignore
-app.use("/auth", [require("./api/routes/auth/signup")])
+app.use("/auth", [
+  require("./api/routes/auth/signup"),
+  require("./api/routes/auth/signin"),
+])
 
 app.use((req, res, next) => {
   const error = new Error("Not found")
