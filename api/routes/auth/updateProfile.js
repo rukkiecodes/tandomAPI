@@ -1,9 +1,9 @@
-const express = require("express");
-const router = express.Router();
-const db = require("../../middlewares/connection");
+const express = require("express")
+const router = express.Router()
+const db = require("../../middlewares/connection")
 
 router.patch("/updateProfile", (req, res) => {
-  const { id, name, email, phone_number } = req.body;
+  const { id, name } = req.body
 
   db.select("*")
     .from("users")
@@ -19,47 +19,45 @@ router.patch("/updateProfile", (req, res) => {
           })
           .update({
             name,
-            email,
-            phone_number,
           })
           .then((data) => {
-            console.log(data);
+            console.log(data)
             db.select("*")
               .from("users")
               .where({ id })
               .then((user) => {
-                console.log("User: ", user);
+                console.log("User: ", user)
                 return res.status(200).json({
                   message: "Profile Updated",
                   data: {
                     status: 200,
                     data: user,
                   },
-                });
+                })
               })
               .catch((err) => {
-                console.log("Error: ", err);
+                console.log("Error: ", err)
                 return res.status(400).json({
                   status: 400,
                   message: "Error fetching profile profile",
                   error: err,
-                });
-              });
+                })
+              })
           })
           .catch((err) => {
-            console.log(err);
+            console.log(err)
             return res.status(400).json({
               status: 400,
               message: "Error updating profile",
               error: err,
-            });
-          });
+            })
+          })
       } else {
-        console.log("nothing to update");
+        console.log("nothing to update")
         return res.status(400).json({
           status: 400,
           message: "nothing to update",
-        });
+        })
       }
     })
     .catch((err) => {
@@ -67,8 +65,8 @@ router.patch("/updateProfile", (req, res) => {
         status: 400,
         message: "Error updating profile",
         error: err,
-      });
-    });
-});
+      })
+    })
+})
 
-module.exports = router;
+module.exports = router
