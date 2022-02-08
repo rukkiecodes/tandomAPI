@@ -37,7 +37,7 @@ router.post("/signin", (req, res) => {
               data: {
                 status: 200,
                 token,
-                data: user[0],
+                user: user[0],
               },
             });
           })
