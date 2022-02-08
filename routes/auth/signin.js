@@ -38,7 +38,7 @@ router.post("/signin", (req, res) => {
           return res.status(200).json({
             message: "Auth successful",
             user,
-            token: token,
+            token,
             success: true,
           })
         }

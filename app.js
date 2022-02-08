@@ -31,7 +31,7 @@ if (process.env.NODE_ENV === "development") {
 app.use("/auth", [
   require("./routes/auth/signup"),
   require("./routes/auth/signin"),
-  // require("./routes/auth/userProfile"),
+  require("./routes/auth/userProfile"),
   // require("./routes/auth/updateProfile"),
 ])
 

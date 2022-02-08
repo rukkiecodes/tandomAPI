@@ -34,10 +34,10 @@ router.post("/signup", (req, res) => {
               .save()
               .then((user) => {
                 console.log(user)
-                return res.status(201).json({
+                res.status(201).json({
                   message: "User created",
                   success: true,
-                  user
+                  user,
                 })
               })
               .catch((error) => {
