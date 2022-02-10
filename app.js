@@ -34,6 +34,7 @@ app.use("/auth", [
 
 app.use("/template", [
   require("./routes/template/getTemplates"),
+  require("./routes/template/sendTemplate"),
 ])
 
 app.use("/uploads", express.static("uploads"))
