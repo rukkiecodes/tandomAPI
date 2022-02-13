@@ -51,7 +51,7 @@ router.post("/sendTemplate", (req, res) => {
 
   send_mail()
     .then((result) => {
-      console.log("Email send...", result)
+      console.log("Email sent...", result)
       res.status(200).json({
         success: true,
         email: result,

@@ -1,1 +1,8 @@
-[{"id":0,"title":"30 off memorial day1","html":"http://localhost:3000/uploads/templates/30_off_memorial_day1.html"},{"id":1,"title":"30 off must have","html":"http://localhost:3000/uploads/templates/30_off_must-have.html"},{"id":2,"title":"30 off sale","html":"http://localhost:3000/uploads/templates/30_off_sale.html"},{"id":3,"title":"30 off sale starts now","html":"http://localhost:3000/uploads/templates/30_off_sale_starts_now.html"},{"id":4,"title":"30 off shipping","html":"http://localhost:3000/uploads/templates/30_off_shipping.html"},{"id":5,"title":"30 off us","html":"http://localhost:3000/uploads/templates/30_off_us.html"},{"id":6,"title":"valantines day","html":"http://localhost:3000/uploads/templates/valantines_day.html"},{"id":7,"title":"valentine day jewellery offer","html":"http://localhost:3000/uploads/templates/valentine_day_jewellery_offer.html"}]
+[{
+  "id": 1,
+  "category": ["valantines day", "Something Sweet",
+    "holidays", "festive", "love"
+  ],
+  "image": "uploads/images/valantines_day.png",
+  "html": "uploads/templates/valantines_day.html"
+}]
